@@ -666,34 +666,34 @@ class ChipInput extends React.Component {
             }}
           >
             {variant === "standard" && chipComponents}
-            <InputComponent
-              ref={this.input}
-              classes={{
-                input: cx(classes.input, classes[variant]),
-                root: cx(classes.inputRoot, classes[variant])
-              }}
-              id={id}
-              value={actualInputValue}
-              onChange={this.handleUpdateInput}
-              onKeyDown={this.handleKeyDown}
-              onKeyPress={this.handleKeyPress}
-              onKeyUp={this.handleKeyUp}
-              onFocus={this.handleInputFocus}
-              onBlur={this.handleInputBlur}
-              inputRef={this.setActualInputRef}
-              disabled={disabled}
-              fullWidth={fullWidthInput}
-              placeholder={
-                (!hasInput && (shrinkFloatingLabel || label == null)) ||
-                alwaysShowPlaceholder
-                  ? placeholder
-                  : null
-              }
-              readOnly={readOnly}
-              {...InputProps}
-              {...InputMore}
-            />
           </ReactSortable>
+          <InputComponent
+            ref={this.input}
+            classes={{
+              input: cx(classes.input, classes[variant]),
+              root: cx(classes.inputRoot, classes[variant])
+            }}
+            id={id}
+            value={actualInputValue}
+            onChange={this.handleUpdateInput}
+            onKeyDown={this.handleKeyDown}
+            onKeyPress={this.handleKeyPress}
+            onKeyUp={this.handleKeyUp}
+            onFocus={this.handleInputFocus}
+            onBlur={this.handleInputBlur}
+            inputRef={this.setActualInputRef}
+            disabled={disabled}
+            fullWidth={fullWidthInput}
+            placeholder={
+              (!hasInput && (shrinkFloatingLabel || label == null)) ||
+              alwaysShowPlaceholder
+                ? placeholder
+                : null
+            }
+            readOnly={readOnly}
+            {...InputProps}
+            {...InputMore}
+          />
         </div>
         {helperText && (
           <FormHelperText
