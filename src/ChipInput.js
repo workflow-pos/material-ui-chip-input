@@ -596,7 +596,15 @@ class ChipInput extends React.Component {
 
     if (variant !== "standard") {
       InputMore.startAdornment = (
-        <ReactSortable list={chips} setList={this.updateChips}>
+        <ReactSortable
+          list={chips}
+          setList={chips => {
+            this.setState({ chips, chipsUpdated: true, ...additionalUpdates });
+            if (this.props.onChange) {
+              this.props.onChange(chips);
+            }
+          }}
+        >
           {chipComponents}
         </ReactSortable>
       );
@@ -645,7 +653,19 @@ class ChipInput extends React.Component {
             [classes.error]: error
           })}
         >
-          <ReactSortable list={chips} setList={this.updateChips}>
+          <ReactSortable
+            list={chips}
+            setList={chips => {
+              this.setState({
+                chips,
+                chipsUpdated: true,
+                ...additionalUpdates
+              });
+              if (this.props.onChange) {
+                this.props.onChange(chips);
+              }
+            }}
+          >
             {variant === "standard" && chipComponents}
           </ReactSortable>
           <InputComponent
