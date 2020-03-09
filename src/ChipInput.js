@@ -394,6 +394,7 @@ class ChipInput extends React.Component {
   };
 
   handleUpdateInput = e => {
+    console.log("changed gangs");
     if (this.props.inputValue == null) {
       this.updateInput(e.target.value);
     }
