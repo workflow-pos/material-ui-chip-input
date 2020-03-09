@@ -596,7 +596,7 @@ class ChipInput extends React.Component {
 
     if (variant !== "standard") {
       InputMore.startAdornment = (
-        <ReactSortable list={chips} setList={updateChips}>
+        <ReactSortable list={chips} setList={this.updateChips}>
           {chipComponents}
         </ReactSortable>
       );
