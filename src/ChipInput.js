@@ -645,7 +645,7 @@ class ChipInput extends React.Component {
             [classes.error]: error
           })}
         >
-          <ReactSortable list={chips} setList={updateChips}>
+          <ReactSortable list={chips} setList={this.updateChips}>
             {variant === "standard" && chipComponents}
           </ReactSortable>
           <InputComponent
