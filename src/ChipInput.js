@@ -305,6 +305,7 @@ class ChipInput extends React.Component {
   };
 
   handleKeyDown = event => {
+    console.log("changed gaasdfasfsngs");
     const { focusedChip } = this.state;
     this._keyPressed = false;
     this._preventChipCreation = false;
@@ -387,6 +388,7 @@ class ChipInput extends React.Component {
   };
 
   handleKeyPress = event => {
+    console.log("changed bags");
     this._keyPressed = true;
     if (this.props.onKeyPress) {
       this.props.onKeyPress(event);
