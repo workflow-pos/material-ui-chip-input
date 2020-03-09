@@ -599,7 +599,7 @@ class ChipInput extends React.Component {
         <ReactSortable
           list={chips}
           setList={chips => {
-            this.setState({ chips, chipsUpdated: true, ...additionalUpdates });
+            this.setState({ chips, chipsUpdated: true });
             if (this.props.onChange) {
               this.props.onChange(chips);
             }
@@ -658,8 +658,7 @@ class ChipInput extends React.Component {
             setList={chips => {
               this.setState({
                 chips,
-                chipsUpdated: true,
-                ...additionalUpdates
+                chipsUpdated: true
               });
               if (this.props.onChange) {
                 this.props.onChange(chips);
